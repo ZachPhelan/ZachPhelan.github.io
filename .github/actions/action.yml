@@ -11,4 +11,7 @@ outputs:
 runs:
   using: 'node12'
   steps:
-    echo "boogie"
+    - name: Test
+      shell: bash
+      run: |
+        echo "boogie"
