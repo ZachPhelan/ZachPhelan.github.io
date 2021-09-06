@@ -10,8 +10,4 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'node12'
-  steps:
-    - name: Test
-      shell: bash
-      run: |
-        echo "boogie"
+  using: 'index.js'
