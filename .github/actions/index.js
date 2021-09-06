@@ -5,7 +5,7 @@ const writeGood = require('write-good');
 try {
   // `who-to-greet` input defined in action metadata file
   const textInput = core.getInput('text');
-  var suggestions = writeGood('${textInput}');
+  var suggestions = writeGood(textInput);
   var output = JSON.stringify(suggestions, undefined, 2);
   console.log(textInput);
   console.log(output);
