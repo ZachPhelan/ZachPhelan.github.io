@@ -1,12 +1,7 @@
 name: 'Write Good'
 description: 'Check files with write-good'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
 outputs:
-  result: # id of output
+  out: # id of output
     description: 'Results from write-good'
 runs:
   using: 'node12'
@@ -24,8 +19,3 @@ runs:
       done
 
       echo "::set-output name=out::$output"
-
-  - name: Print information
-    shell: bash
-    run: |
-
