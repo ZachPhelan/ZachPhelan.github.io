@@ -1,14 +1,31 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Write Good'
+description: 'Check files with write-good'
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
     default: 'World'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  result: # id of output
+    description: 'Results from write-good'
 runs:
   using: 'node12'
-  main: 'index.js'
+  steps: 
+  - name: Run write-good
+    id: check
+    shell: bash
+    run: |
+      statuscode=0
+      output=""
+      for file in *.md; do
+        [ -f "$i" ] || break
+        echo "::debug::Checking $file"
+        output=$output:write-good $file
+      done
+
+      echo "::set-output name=out::$output"
+
+  - name: Print information
+    shell: bash
+    run: |
 
