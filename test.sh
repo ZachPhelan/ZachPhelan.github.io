@@ -5,5 +5,5 @@ test() {
     then
         x=$(ls) 
         echo "Done"
-    fi
+    done
 }
