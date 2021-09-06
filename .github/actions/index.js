@@ -4,11 +4,11 @@ const writeGood = require('write-good');
 
 try {
   // `who-to-greet` input defined in action metadata file
-  const nameToGreet = core.getInput('who-to-greet');
-  console.log(`Hello ${nameToGreet}!`);
-  var suggestions = writeGood('So the cat was stolen.');
+  const textInput = core.getInput('text');
+  var suggestions = writeGood('${textInput}');
   var output = JSON.stringify(suggestions, undefined, 2);
-  core.setOutput("out", output);
+  console.log('${textInput}');
+  console.log('${output}');
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
