@@ -10,12 +10,4 @@ runs:
     id: check
     shell: bash
     run: |
-      statuscode=0
-      output=""
-      for file in *.md; do
-        [ -f "$i" ] || break
-        echo "::debug::Checking $file"
-        output=$output:write-good $file
-      done
-
-      echo "::set-output name=out::$output"
+      echo "::debug::Checking $file"
