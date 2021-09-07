@@ -17,8 +17,8 @@ jobs:
           npm install
           npm install write-good
           temp=false
-          for file in $(find . -name '*.md'); do
-            npx write-good $file 2> /dev/null
+          for file in $(find . -name '*.md' -not -path './node_modules/*'); do
+            npx write-good $file 
             temp=true
           done
 
