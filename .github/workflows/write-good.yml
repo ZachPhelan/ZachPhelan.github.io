@@ -19,4 +19,5 @@ jobs:
           for file in $(find . -name '*.md'); do
             npx write-good $file
           done
+        working-directory: ./
 
