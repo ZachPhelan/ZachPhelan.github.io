@@ -16,17 +16,16 @@ jobs:
         run: |
           npm install
           npm install write-good
-          temp=false
+          #error=false
           for file in $(find . -name '*.md' -not -path './node_modules/*'); do
             npx write-good $file 
-            temp=true
+            #  error=true
           done
 
-          if [ temp ] 
-          then
-            exit 2
-          fi
+          #if [ error ] 
+          #then
+          #  exit 2
+          #fi
           
-        working-directory: ./
         shell: bash {0}
 
