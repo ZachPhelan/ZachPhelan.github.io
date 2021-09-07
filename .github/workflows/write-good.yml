@@ -22,6 +22,7 @@ jobs:
       - name: write-good CL
         id: CL-writegood
         run: |
+          npm install
           npm install write-good
           write-good ./*.md
 
