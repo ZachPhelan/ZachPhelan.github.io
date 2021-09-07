@@ -1,1 +1,1 @@
-So the cat was stolen.
+I stole the cat
