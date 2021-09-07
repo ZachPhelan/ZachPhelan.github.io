@@ -16,8 +16,15 @@ jobs:
         run: |
           npm install
           npm install write-good
+          temp=false
           for file in $(find . -name '*.md'); do
             npx write-good $file 2> /dev/null
+            temp=true
           done
+
+          if [ temp ] {
+            exit 2
+          }
         working-directory: ./
+        shell: bash {0}
 
