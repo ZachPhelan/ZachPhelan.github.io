@@ -9,16 +9,8 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Write Good Action Step
-        id: hello
-        uses: ./.github/actions # Uses an action in the root directory
-        with:
-          text: 'So the cat was stolen.'
 
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.out }}"
-
+      # Installs and uses write-good to check all .md files in root directory.
       - name: write-good CL
         id: CL-writegood
         run: |
