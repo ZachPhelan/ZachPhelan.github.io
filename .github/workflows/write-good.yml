@@ -19,3 +19,7 @@ jobs:
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.out }}"
 
+      - name: write-good CL
+        id: CL-writegood
+        run: write-good ./*.md
+
