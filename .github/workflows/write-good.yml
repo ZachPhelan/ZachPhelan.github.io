@@ -22,9 +22,11 @@ jobs:
             temp=true
           done
 
-          if [ temp ] {
+          if [ temp ] 
+          then
             exit 2
-          }
+          fi
+          
         working-directory: ./
         shell: bash {0}
 
