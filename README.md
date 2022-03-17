@@ -1,5 +1,3 @@
 # ZachPhelan.github.io
 
-I stole the cat
-
-That is unfortunaet. 
+This is for the senior project now.
